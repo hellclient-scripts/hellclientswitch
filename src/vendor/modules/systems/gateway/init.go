@@ -1,7 +1,7 @@
 package gateway
 
 import (
-	"log"
+	"bytes"
 	"net/http"
 
 	"github.com/herb-go/connections"
@@ -19,8 +19,7 @@ type Gateway struct {
 	*contexts.Contexts
 }
 
-//OnMessage called when connection message received.
-func (g *Gateway) OnMessage(m *connections.Message) {
+func (g *Gateway) DoBroadcast(m *connections.Message) {
 	go func() {
 		list := g.Gateway.ListConn()
 		for _, v := range list {
@@ -31,9 +30,16 @@ func (g *Gateway) OnMessage(m *connections.Message) {
 	}()
 }
 
+//OnMessage called when connection message received.
+func (g *Gateway) OnMessage(m *connections.Message) {
+	if bytes.HasPrefix(m.Message, CommandBroadcast) {
+		g.DoBroadcast(m)
+	}
+}
+
 //OnError called when onconnection error raised.
 func (g *Gateway) OnError(e *connections.Error) {
-	log.Panicln(e.Error.Error())
+	util.LogError(e.Error)
 }
 
 func New() *Gateway {
