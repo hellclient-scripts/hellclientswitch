@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"modules/systems/gateway"
+	"hellclientswitch/modules/systems/gateway"
 
 	"github.com/herb-go/herb/middleware"
 	"github.com/herb-go/herb/middleware/router"

@@ -1,7 +1,7 @@
 package loggers
 
 import (
-	"modules/app"
+	"hellclientswitch/modules/app"
 	"os"
 	"os/signal"
 

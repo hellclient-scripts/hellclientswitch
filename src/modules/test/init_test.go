@@ -1,7 +1,7 @@
 package test
 
 import (
-	"modules/app"
+	"hellclientswitch/modules/app"
 	"os"
 	"testing"
 )

@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"modules/app"
-	"modules/test"
+	"hellclientswitch/modules/app"
+	"hellclientswitch/modules/test"
 	"os"
 	"testing"
 )

@@ -2,8 +2,8 @@ package wsserver
 
 import (
 	"fmt"
-	"modules/app"
-	"modules/routers"
+	"hellclientswitch/modules/app"
+	"hellclientswitch/modules/routers"
 	"net/http"
 
 	"github.com/herb-go/herb/middleware"

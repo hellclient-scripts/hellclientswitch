@@ -1,8 +1,8 @@
 package overseers
 
 import (
-	"modules/app"
-	_ "modules/hired" //hired workers
+	"hellclientswitch/modules/app"
+	_ "hellclientswitch/modules/hired" //hired workers
 
 	"github.com/herb-go/util"
 	"github.com/herb-go/worker"

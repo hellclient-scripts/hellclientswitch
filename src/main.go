@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "modules"
-	"modules/app"
-	_ "modules/drivers"
-	"modules/overseers"
+	_ "hellclientswitch/modules"
+	"hellclientswitch/modules/app"
+	_ "hellclientswitch/modules/drivers"
+	"hellclientswitch/modules/overseers"
 
 	"github.com/herb-go/util"
 	"github.com/herb-go/util/config"

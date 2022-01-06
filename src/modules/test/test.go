@@ -1,10 +1,10 @@
 package test
 
 import (
-	_ "modules" //modules init
-	"modules/app"
-	_ "modules/drivers" //drivers
-	"modules/overseers"
+	_ "hellclientswitch/modules" //modules init
+	"hellclientswitch/modules/app"
+	_ "hellclientswitch/modules/drivers" //drivers
+	"hellclientswitch/modules/overseers"
 	"path/filepath"
 
 	"github.com/herb-go/util"
