@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #settings
-binname="hellclientswitch"
-buildername="build-linux.sh"
+binname="hellclientswitch.exe"
+buildername="build-win.sh"
 
 
 if [ -z "$1" ]

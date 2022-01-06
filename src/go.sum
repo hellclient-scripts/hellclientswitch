@@ -24,6 +24,8 @@ github.com/herb-go/herbconfig v0.0.0-20210201131438-44d8e331b703 h1:aEnFmsx4aq/e
 github.com/herb-go/herbconfig v0.0.0-20210201131438-44d8e331b703/go.mod h1:Ws/99AdD6PWdGzCoVvqaPMU/qgJJxJTBykFz+20sd/E=
 github.com/herb-go/logger v0.0.0-20210115164802-8259bb9dcc90 h1:bgr4Q5iG44ihO3NZK109xh3QMR5+r6q2Q9hWJhvMJcU=
 github.com/herb-go/logger v0.0.0-20210115164802-8259bb9dcc90/go.mod h1:Unbyc9sDRQawPLG4O6/AgqLF6/n/T7X58ft3QJOwuCI=
+github.com/herb-go/misc v0.0.0-20211126182020-07f86379a857 h1:ffMPa0PMee7U+TDhacohhKmvsty5ORsYrfsL/ZMsoP8=
+github.com/herb-go/misc v0.0.0-20211126182020-07f86379a857/go.mod h1:BN0WWQ5UZCd37QpMXm2qXx55Eqonjioa0eQ+VgOivsY=
 github.com/herb-go/uniqueid v0.0.0-20210304163719-ac56f6357531 h1:api8pHgzqqq99X56e+80gP06jd54ARx562YoGrmRMYQ=
 github.com/herb-go/uniqueid v0.0.0-20210304163719-ac56f6357531/go.mod h1:Anvh+YXng5fWGXy9Y6oWcTUUYQlXHzgeVh/0as237EM=
 github.com/herb-go/util v0.0.0-20211222163651-885e0ee2aad0 h1:aVjVXPEzCR0YOJgf7v3u10X6pP5u6fh2K/17al5QpBA=

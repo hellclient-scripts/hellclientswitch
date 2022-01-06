@@ -13,6 +13,7 @@ require (
 	github.com/herb-go/herb v0.0.0-20211208162721-3915598f7a40
 	github.com/herb-go/herbconfig v0.0.0-20210201131438-44d8e331b703
 	github.com/herb-go/logger v0.0.0-20210115164802-8259bb9dcc90
+	github.com/herb-go/misc v0.0.0-20211126182020-07f86379a857
 	github.com/herb-go/uniqueid v0.0.0-20210304163719-ac56f6357531
 	github.com/herb-go/util v0.0.0-20211222163651-885e0ee2aad0
 	github.com/herb-go/worker v0.0.0-20210318151232-dbaf101c7d73

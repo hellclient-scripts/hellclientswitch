@@ -4,6 +4,11 @@
 binname="hellclientswitch"
 buildername="build-linux.sh"
 
+winbinname="hellclientswitch.exe"
+winbuildername="build-win.sh"
+
+winmclconvertorname="mclconvertor.exe"
+
 
 if [ -z "$1" ]
 then 
@@ -22,6 +27,7 @@ cd $path
 echo "Publish to $1."
 echo "Building"
 bash ./$buildername
+bash ./$winbuildername
 echo "Creating folder $1."
 mkdir $1
 mkdir $1/appdata
@@ -29,6 +35,7 @@ cp ../../appdata/readme.md $1/appdata/readme.md
 echo "Copying bin file."
 mkdir $1/bin
 cp -rpf ../../bin/$binname $1/bin/$binname
+cp -rpf ../../bin/$winbinname $1/bin/$winbinname
 echo "Copying system files."
 cp -rpf ../../system $1/system
 echo "Copying resources files."
