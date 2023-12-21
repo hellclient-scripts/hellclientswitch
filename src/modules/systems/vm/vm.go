@@ -48,7 +48,7 @@ func (vm *VM) Start() {
 		if app.System.TickerDurationInSeconds > 0 {
 			vm.ticker = time.NewTicker(time.Duration(app.System.TickerDurationInSeconds) * time.Second)
 			go func() {
-				for _ = range vm.ticker.C {
+				for range vm.ticker.C {
 					vm.OnTicker()
 				}
 			}()
