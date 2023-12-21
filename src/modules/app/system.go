@@ -9,26 +9,30 @@ import (
 	"github.com/herb-go/util/config/tomlconfig"
 )
 
-//SystemConfig system config data struct.
-//Struct must  unmarshaleable by Toml lib.
-//You should comment this struct if you use third party config struct.
+// SystemConfig system config data struct.
+// Struct must  unmarshaleable by Toml lib.
+// You should comment this struct if you use third party config struct.
 type SystemConfig struct {
-	Addr     string
-	Username string
-	Password string
+	Addr                    string
+	Username                string
+	Password                string
+	Script                  string
+	TickerDurationInSeconds int64
+	OnMessage               string
+	OnTicker                string
 }
 
-//System config instance of system.
+// System config instance of system.
 var System = &SystemConfig{}
 
 var syncSystem atomic.Value
 
-//StoreSystem atomically store system config
+// StoreSystem atomically store system config
 func (a *appSync) StoreSystem(c *SystemConfig) {
 	syncSystem.Store(c)
 }
 
-//LoadSystem atomically load system config
+// LoadSystem atomically load system config
 func (a *appSync) LoadSystem() *SystemConfig {
 	v := syncSystem.Load()
 	if v == nil {

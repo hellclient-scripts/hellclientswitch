@@ -2,6 +2,8 @@ package gateway
 
 import (
 	"bytes"
+	"hellclientswitch/modules/app"
+	"hellclientswitch/modules/systems/vm"
 	"net/http"
 
 	"github.com/herb-go/connections"
@@ -11,11 +13,12 @@ import (
 	"github.com/herb-go/util"
 )
 
-//ModuleName module name
+// ModuleName module name
 const ModuleName = "900systems.gateway"
 
 type Gateway struct {
 	Gateway *connections.Gateway
+	vm      *vm.VM
 	*contexts.Contexts
 }
 
@@ -30,16 +33,34 @@ func (g *Gateway) DoBroadcast(m *connections.Message) {
 	}()
 }
 
-//OnMessage called when connection message received.
+// OnMessage called when connection message received.
 func (g *Gateway) OnMessage(m *connections.Message) {
 	if bytes.HasPrefix(m.Message, CommandBroadcast) {
+		msg := string(m.Message)
+		if app.System.Script != "" && app.System.OnMessage != "" {
+			if !g.vm.OnMessage(m.Conn.ID(), msg) {
+				return
+			}
+		}
 		g.DoBroadcast(m)
 	}
 }
 
-//OnError called when onconnection error raised.
+// OnError called when onconnection error raised.
 func (g *Gateway) OnError(e *connections.Error) {
 	util.LogError(e.Error)
+}
+func (g *Gateway) APISendMessage(id string, msg string) {
+	g.Gateway.Send(id, []byte(msg))
+}
+func (g *Gateway) APIBroadcast(msg string) {
+	go func() {
+		list := g.Gateway.ListConn()
+		for _, v := range list {
+			v.Send([]byte(msg))
+		}
+	}()
+
 }
 
 func New() *Gateway {
@@ -47,6 +68,7 @@ func New() *Gateway {
 		Gateway:  connections.NewGateway(),
 		Contexts: contexts.New(),
 	}
+	g.vm = vm.Create(g)
 	g.Gateway.IDGenerator = uniqueid.DefaultGenerator.GenerateID
 	return g
 }
@@ -54,6 +76,7 @@ func New() *Gateway {
 var DefaultGateway = New()
 
 func Start() {
+	DefaultGateway.vm.Start()
 	go connections.Consume(DefaultGateway.Gateway, DefaultGateway)
 }
 

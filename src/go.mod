@@ -4,6 +4,7 @@ go 1.16
 
 require (
 	github.com/BurntSushi/toml v0.4.1 // indirect
+	github.com/dop251/goja v0.0.0-20231027120936-b396bb4c349d
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/herb-go/connections v0.0.0-20211230181350-552c818e1c06
