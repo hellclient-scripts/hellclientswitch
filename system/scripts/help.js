@@ -1,6 +1,6 @@
 const messageLifetime = 600 * 1000;
 const maxNode=15;
-const minNode=1;
+const minNode=5;
 
 var currentNodes = {}
 var activeNodes = {}
@@ -78,14 +78,14 @@ function broadcast(channel, msg) {
 }
 function OnMessage(id, msg) {
     let data = msg.split(" ")
-    if (data.length > 2) {
-        if (data[1] == "help") {
-            onActive(id, data[2])
-            newMessage(data[2] + " " + data[3], id)
-            return broadcast(data[2],msg)
-        } else if (data[1] == 'found') {
-            onActive(id, data[2])
-            reply(data[2] + " " + data[3].split("|")[0], msg)
+    if (data.length > 3&& data[1]=="zsz-self.jvs") {
+        if (data[2] == "help") {
+            onActive(id, data[3])
+            newMessage(data[3] + " " + data[4], id)
+            return broadcast(data[3],msg)
+        } else if (data[2] == 'found') {
+            onActive(id, data[3])
+            reply(data[3] + " " + data[4].split("|")[0], msg)
             return false
         }
     }
