@@ -2,7 +2,7 @@ package vm
 
 import (
 	"fmt"
-	"hellclientswitch/modules/app"
+	"modules/app"
 	"os"
 	"sync"
 	"time"

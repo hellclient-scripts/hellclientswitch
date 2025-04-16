@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "hellclientswitch/modules"
-	"hellclientswitch/modules/app"
-	_ "hellclientswitch/modules/drivers"
-	"hellclientswitch/modules/overseers"
+	_ "modules"
+	"modules/app"
+	_ "modules/drivers"
+	"modules/overseers"
 
 	"github.com/herb-go/util"
 	"github.com/herb-go/util/config"
@@ -23,7 +23,7 @@ func initModules() {
 	//Put Your own init code here.
 }
 
-//Main app run func.
+// Main app run func.
 var run = func() {
 	//Put your run code here
 	util.WaitingQuit()
@@ -32,11 +32,11 @@ var run = func() {
 
 }
 
-//Init init app
+// Init init app
 func Init() {
 	defer util.RecoverAndExit()
-	util.ApplieationLock.Lock()
-	defer util.ApplieationLock.Unlock()
+	util.ApplicationLock.Lock()
+	defer util.ApplicationLock.Unlock()
 	util.UpdatePaths()
 	util.MustChRoot()
 	loadConfigs()

@@ -2,8 +2,8 @@ package wsserver
 
 import (
 	"fmt"
-	"hellclientswitch/modules/app"
-	"hellclientswitch/modules/routers"
+	"modules/app"
+	"modules/routers"
 	"net/http"
 
 	"github.com/herb-go/herb/middleware"
@@ -11,7 +11,7 @@ import (
 	"github.com/herb-go/util/httpserver"
 )
 
-//ModuleName module name
+// ModuleName module name
 const ModuleName = "900wsserver"
 const BasicauthRealm = ""
 

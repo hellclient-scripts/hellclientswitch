@@ -1,8 +1,8 @@
 package modules
 
 import (
-	_ "hellclientswitch/modules/loggers" //Logger modules
-	_ "hellclientswitch/modules/wsserver"
+	_ "modules/loggers" //Logger modules
+	_ "modules/wsserver"
 )
 
 //websocket modules

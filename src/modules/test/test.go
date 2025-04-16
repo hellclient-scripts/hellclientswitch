@@ -1,10 +1,10 @@
 package test
 
 import (
-	_ "hellclientswitch/modules" //modules init
-	"hellclientswitch/modules/app"
-	_ "hellclientswitch/modules/drivers" //drivers
-	"hellclientswitch/modules/overseers"
+	_ "modules" //modules init
+	"modules/app"
+	_ "modules/drivers" //drivers
+	"modules/overseers"
 	"path/filepath"
 
 	"github.com/herb-go/util"
@@ -25,10 +25,10 @@ func initModules() {
 	//Put Your own init code here.
 }
 
-//Init init app config and modules
+// Init init app config and modules
 func Init() {
-	util.ApplieationLock.Lock()
-	defer util.ApplieationLock.Unlock()
+	util.ApplicationLock.Lock()
+	defer util.ApplicationLock.Unlock()
 	testingtools.SetRootPathRelativeToModules("../")
 	util.UpdatePaths()
 	util.ConfigPath = filepath.Join(util.RootPath, "test", "testconfig")
@@ -45,7 +45,7 @@ func Init() {
 	overseers.MustTrainWorkers()
 }
 
-//Run run app
+// Run run app
 func Run() {
 	//Put your run code here
 	util.WaitingQuit()

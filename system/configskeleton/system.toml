@@ -2,7 +2,7 @@
 Addr=":4356"
 Username="abc"
 Password="123"
-Script="scripts/help.js"
-OnMessage="OnMessage"
-OnTicker="OnTicker"
-TickerDurationInSeconds=600
+# Script="scripts/help.js"
+# OnMessage="OnMessage"
+# OnTicker="OnTicker"
+# TickerDurationInSeconds=600

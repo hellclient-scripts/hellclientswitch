@@ -2,8 +2,8 @@ package gateway
 
 import (
 	"bytes"
-	"hellclientswitch/modules/app"
-	"hellclientswitch/modules/systems/vm"
+	"modules/app"
+	"modules/systems/vm"
 	"net/http"
 
 	"github.com/herb-go/connections"

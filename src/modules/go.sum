@@ -1,6 +1,7 @@
 github.com/BurntSushi/toml v1.5.0 h1:W5quZX/G/csjUnuI8SUYlsHs9M38FC7znL0lIO+DvMg=
 github.com/BurntSushi/toml v1.5.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2lLoLwho=
 github.com/Masterminds/semver/v3 v3.2.1 h1:RN9w6+7QoMeJVGyfmbcgs28Br8cvmnucEXnY0rYXWg0=
+github.com/Masterminds/semver/v3 v3.2.1/go.mod h1:qvl/7zhW3nngYb5+80sSMF+FG2BjYrf8m9wsX0PNOMQ=
 github.com/denisenkom/go-mssqldb v0.9.0/go.mod h1:xbL0rPBG9cCiLr28tMa8zpbdarY27NDyej4t/EjAShU=
 github.com/dlclark/regexp2 v1.11.4 h1:rPYF9/LECdNymJufQKmri9gV604RvvABwgOA8un7yAo=
 github.com/dlclark/regexp2 v1.11.4/go.mod h1:DHkYz0B9wPfa6wondMfaivmHpzrQ3v9q8cnmRbL6yW8=
@@ -25,6 +26,8 @@ github.com/herb-go/datasource v0.0.0-20211122123843-a3546acd0d8d h1:FnyR7t0dmvpe
 github.com/herb-go/datasource v0.0.0-20211122123843-a3546acd0d8d/go.mod h1:VFDCNa6YNGvEy3YPg9cBdr2aYFEQagXVXbqfU8zwzb4=
 github.com/herb-go/datasource-drivers v0.0.0-20201011165914-7717acb90545 h1:WyV3ABpu5GhTxeJe2yYrCi5NZSgox4tdnfRCQiYvLBg=
 github.com/herb-go/datasource-drivers v0.0.0-20201011165914-7717acb90545/go.mod h1:ANYyxzgRT+z0jfCswVTJ4bWKdT9sBsnPzASfc/YJzwE=
+github.com/herb-go/events v0.0.0-20201208131041-0345a1e2578a h1:P0FwnBG01w/x+Nb0NbEDMPKCO/X/6+vaJ3MjgYyIqM8=
+github.com/herb-go/events v0.0.0-20201208131041-0345a1e2578a/go.mod h1:ZzP/ImyzQER+p6eBPYOZ0mbpjORKMEUx+R6JX7CPbw8=
 github.com/herb-go/herb v0.0.0-20220217124526-724bf7d5e579 h1:Nq3+RZRUi3fOlrA5UNlbJsBTyoDz1wACYLarwewcFxY=
 github.com/herb-go/herb v0.0.0-20220217124526-724bf7d5e579/go.mod h1:epDwnEWl9B23uBEKz8mLk0GuHm04MSp4rnIZev0wiwA=
 github.com/herb-go/herbconfig v0.0.0-20210201131438-44d8e331b703 h1:aEnFmsx4aq/edjRn7bw58LAxR52X9oouWeEE//SgIpg=
@@ -50,3 +53,4 @@ golang.org/x/sys v0.13.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/text v0.3.8 h1:nAL+RVCQ9uMn3vJZbV+MRnydTJFPf8qqY42YiA6MrqY=
 golang.org/x/text v0.3.8/go.mod h1:E6s5w1FMmriuDzIBO73fBruAKo1PCIq6d2Q6DHfQ8WQ=
 gopkg.in/yaml.v2 v2.4.0 h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY=
+gopkg.in/yaml.v2 v2.4.0/go.mod h1:RDklbk79AGWmwhnvt/jBztapEOGDOx6ZbXqjP6csGnQ=
